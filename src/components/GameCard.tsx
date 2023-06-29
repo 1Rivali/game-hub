@@ -6,7 +6,7 @@ import getCropedImageUrl from '../services/image-url';
 
 const GameCard = ({ game }: GameCardProps) => {
   return (
-    <Card borderRadius={10} overflow={'hidden'}>
+    <Card width={350} borderRadius={10} overflow={'hidden'}>
       <Image src={getCropedImageUrl(game.background_image)} />
       <CardBody>
         <Heading fontSize={'2xl'}>{game.name}</Heading>
