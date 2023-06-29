@@ -6,9 +6,9 @@ import getCropedImageUrl from '../services/image-url';
 
 const GameCard = ({ game }: GameCardProps) => {
   return (
-    <Card width={350} borderRadius={10} overflow={'hidden'}>
+    <Card>
       <Image src={getCropedImageUrl(game.background_image)} />
-      <CardBody>
+      <CardBody height={200}>
         <Heading fontSize={'2xl'}>{game.name}</Heading>
         <HStack justifyContent="space-between">
           <PlatformIconsList

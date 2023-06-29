@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 export interface Platform {
   id: number;
   name: string;
@@ -23,4 +25,8 @@ export interface PlatformIconsListProps {
 
 export interface CriticScoreProps {
   score: number;
+}
+
+export interface GameCardContainerProps {
+  children: ReactNode;
 }
