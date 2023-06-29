@@ -8,6 +8,7 @@ export interface Game {
   name: string;
   background_image: string;
   parent_platforms: { platform: Platform }[];
+  metacritic: number;
 }
 export interface FetchGamesResponse {
   count: number;
@@ -18,4 +19,8 @@ export interface GameCardProps {
 }
 export interface PlatformIconsListProps {
   platforms: Platform[];
+}
+
+export interface CriticScoreProps {
+  score: number;
 }
