@@ -41,3 +41,11 @@ export interface FetchResponse<T> {
   count: number;
   results: T[];
 }
+
+export interface GenreListProps {
+  onSelectGenre: (genre: Genre) => void;
+}
+
+export interface GameGridProps {
+  selectedGenre: Genre | null;
+}
