@@ -12,7 +12,10 @@ import { MdPhoneIphone } from 'react-icons/md';
 import { SiNintendo } from 'react-icons/si';
 import { BsGlobe } from 'react-icons/bs';
 import { IconType } from 'react-icons';
-const PlatformIconsList = ({ platforms }: PlatformIconsListProps) => {
+const PlatformIconsList = ({
+  platforms,
+  selectedPlatform,
+}: PlatformIconsListProps) => {
   const iconMap: { [key: string]: IconType } = {
     pc: FaWindows,
     playstation: FaPlaystation,
@@ -29,7 +32,9 @@ const PlatformIconsList = ({ platforms }: PlatformIconsListProps) => {
       {platforms.map((platform) => (
         <Icon
           as={iconMap[platform.slug]}
-          color={'gray.500'}
+          color={
+            selectedPlatform?.slug === platform.slug ? 'green.600' : 'gray.500'
+          }
           key={platform.id}
         />
       ))}

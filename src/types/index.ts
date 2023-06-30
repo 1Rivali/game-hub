@@ -18,9 +18,11 @@ export interface FetchGamesResponse {
 }
 export interface GameCardProps {
   game: Game;
+  selectedPlatform: Platform | null;
 }
 export interface PlatformIconsListProps {
   platforms: Platform[];
+  selectedPlatform: Platform | null;
 }
 
 export interface CriticScoreProps {
@@ -49,10 +51,15 @@ export interface GenreListProps {
 
 export interface GameGridProps {
   selectedGenre: Genre | null;
+  selectedPlatform: Platform | null;
 }
 
 export interface Platform {
   id: number;
   name: string;
   slug: string;
+}
+export interface PlatformSelectorProps {
+  onSelectPlatform: (platform: Platform) => void;
+  selectedPlatform: Platform | null;
 }
