@@ -19,7 +19,6 @@ const useData = <T>(endpoint: string) => {
       })
       .catch((err) => {
         if (err instanceof CanceledError) {
-          console.log('instance of Canceled Error');
           return;
         }
         setError(err.message);
