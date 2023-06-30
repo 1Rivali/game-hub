@@ -10,7 +10,7 @@ import useGenres from '../hooks/useGeres';
 import getCropedImageUrl from '../services/image-url';
 import { GenreListProps } from '../types';
 
-const GenreList = ({ onSelectGenre }: GenreListProps) => {
+const GenreList = ({ selectedGenre, onSelectGenre }: GenreListProps) => {
   const { data, isLoading, error } = useGenres();
   if (error) return null;
 
@@ -31,6 +31,7 @@ const GenreList = ({ onSelectGenre }: GenreListProps) => {
                 onClick={() => onSelectGenre(genre)}
                 fontSize={'lg'}
                 variant={'link'}
+                fontWeight={genre.id === selectedGenre?.id ? 'bold' : 'normal'}
               >
                 {genre.name}
               </Button>

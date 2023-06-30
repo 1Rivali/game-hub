@@ -44,6 +44,7 @@ export interface FetchResponse<T> {
 
 export interface GenreListProps {
   onSelectGenre: (genre: Genre) => void;
+  selectedGenre: Genre | null;
 }
 
 export interface GameGridProps {
