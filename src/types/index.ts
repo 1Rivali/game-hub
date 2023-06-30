@@ -35,7 +35,8 @@ export interface Genre {
   id: number;
   name: string;
 }
-export interface FetchGenresResponse {
+
+export interface FetchResponse<T> {
   count: number;
-  results: Genre[];
+  results: T[];
 }
