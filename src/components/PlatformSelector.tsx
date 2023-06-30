@@ -12,7 +12,11 @@ const PlatformSelector = ({
 
   return (
     <Menu>
-      <MenuButton as={Button} rightIcon={<BsChevronDown />}>
+      <MenuButton
+        as={Button}
+        rightIcon={<BsChevronDown />}
+        color={selectedPlatform ? 'green.600' : undefined}
+      >
         {selectedPlatform?.name ?? 'Platforms'}
       </MenuButton>
       <MenuList>

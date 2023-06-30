@@ -32,7 +32,7 @@ const GenreList = ({ selectedGenre, onSelectGenre }: GenreListProps) => {
                 fontSize={'lg'}
                 variant={'link'}
                 fontWeight={genre.id === selectedGenre?.id ? 'bold' : 'normal'}
-                color={genre.id === selectedGenre?.id ? 'green.600' : null}
+                color={genre.id === selectedGenre?.id ? 'green.600' : undefined}
               >
                 {genre.name}
               </Button>
