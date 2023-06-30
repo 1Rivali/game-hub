@@ -50,8 +50,7 @@ export interface GenreListProps {
 }
 
 export interface GameGridProps {
-  selectedGenre: Genre | null;
-  selectedPlatform: Platform | null;
+  gameQuery: GameQuery;
 }
 
 export interface Platform {
@@ -62,4 +61,8 @@ export interface Platform {
 export interface PlatformSelectorProps {
   onSelectPlatform: (platform: Platform) => void;
   selectedPlatform: Platform | null;
+}
+export interface GameQuery {
+  genre: Genre | null;
+  platform: Platform | null;
 }

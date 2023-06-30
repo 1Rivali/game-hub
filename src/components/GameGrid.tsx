@@ -5,8 +5,8 @@ import GameCardSkeleton from './GameCardSkeleton';
 import GameCardContainer from './GameCardContainer';
 import { GameGridProps } from '../types';
 
-const GameGrid = ({ selectedGenre, selectedPlatform }: GameGridProps) => {
-  const { data, error, isLoading } = useGames(selectedGenre, selectedPlatform);
+const GameGrid = ({ gameQuery }: GameGridProps) => {
+  const { data, error, isLoading } = useGames(gameQuery);
   const skeletons = [1, 2, 3, 4, 5, 6, 7, 8];
 
   return (
@@ -25,7 +25,7 @@ const GameGrid = ({ selectedGenre, selectedPlatform }: GameGridProps) => {
           ))}
         {data?.map((game) => (
           <GameCardContainer key={game.id}>
-            <GameCard selectedPlatform={selectedPlatform} game={game} />
+            <GameCard selectedPlatform={gameQuery.platform} game={game} />
           </GameCardContainer>
         ))}
       </SimpleGrid>
