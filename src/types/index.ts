@@ -66,8 +66,17 @@ export interface GameQuery {
   genre: Genre | null;
   platform: Platform | null;
   sortOrder: string | null;
+  searchText: string;
 }
 export interface SortSelectorProps {
   onSelectSortOrder: (sortOrder: string) => void;
   selectedSortOrder: string | null;
+}
+
+export interface SearchInputProps {
+  onSearch: (searchText: string) => void;
+}
+
+export interface NavBarProps {
+  onSearch: (searchText: string) => void;
 }
