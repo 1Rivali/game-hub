@@ -50,3 +50,9 @@ export interface GenreListProps {
 export interface GameGridProps {
   selectedGenre: Genre | null;
 }
+
+export interface Platform {
+  id: number;
+  name: string;
+  slug: string;
+}
