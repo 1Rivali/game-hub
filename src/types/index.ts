@@ -65,4 +65,9 @@ export interface PlatformSelectorProps {
 export interface GameQuery {
   genre: Genre | null;
   platform: Platform | null;
+  sortOrder: string | null;
+}
+export interface SortSelectorProps {
+  onSelectSortOrder: (sortOrder: string) => void;
+  selectedSortOrder: string | null;
 }
