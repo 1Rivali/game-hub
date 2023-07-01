@@ -2,7 +2,7 @@ import { Text } from '@chakra-ui/react';
 import { EmojiProps } from '../types';
 
 const Emoji = ({ rating }: EmojiProps) => {
-  if (rating < 3) return;
+  if (rating < 3) return null;
   const emojiMap: { [key: number]: string } = {
     3: '🤣',
     4: '👍',
