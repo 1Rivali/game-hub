@@ -80,3 +80,7 @@ export interface SearchInputProps {
 export interface NavBarProps {
   onSearch: (searchText: string) => void;
 }
+
+export interface GameHeadingProps {
+  gameQuery: GameQuery;
+}
