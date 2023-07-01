@@ -1,4 +1,4 @@
-import { Game, GameQuery, Genre, Platform } from '../types';
+import { Game, GameQuery } from '../types';
 import useData from './useData';
 
 const useGames = (gameQuery: GameQuery) =>

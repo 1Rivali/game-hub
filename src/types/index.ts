@@ -11,6 +11,7 @@ export interface Game {
   background_image: string;
   parent_platforms: { platform: Platform }[];
   metacritic: number;
+  rating_top: number;
 }
 export interface FetchGamesResponse {
   count: number;
@@ -83,4 +84,7 @@ export interface NavBarProps {
 
 export interface GameHeadingProps {
   gameQuery: GameQuery;
+}
+export interface EmojiProps {
+  rating: number;
 }
