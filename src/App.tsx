@@ -35,7 +35,7 @@ function App() {
           </GridItem>
         </Show>
         <GridItem area={'main'}>
-          <Box paddingLeft={10} marginBottom={5}>
+          <HStack justifyContent={'space-between'} marginX={10}>
             <GameHeading gameQuery={gameQuery} />
             <HStack>
               <PlatformSelector
@@ -51,7 +51,7 @@ function App() {
                 }
               />
             </HStack>
-          </Box>
+          </HStack>
           <GameGrid gameQuery={gameQuery} />
         </GridItem>
       </Grid>
